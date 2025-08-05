@@ -31,7 +31,7 @@ Reports of both of these activities are stored in the report path set in the set
 - Hidden Files: This will attempt to unhide any hidden files the scan has picked up.
 
 ## Settings
-The application has a settings Window to allow it to be used in different environments, if you try to run any of the features that require these settings without filling them in you will get an error. The settings are stored in a settings.json file in the same directory as the applications executable. In the below examples I will be using my home domain as an example for the values, which is dank.net or DANKNET depending on where it is featured. All Regex filters should support [Microsoft's standard library](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference) for Regex strings.
+The application has a settings Window to allow it to be used in different environments, if you try to run any of the features that require these settings without filling them in you will get an error. The settings are stored in a settings.json file in the same directory as the applications executable. In the below examples I will be using my home domain as an example for the values, which is dank.net or DANKNET depending on where it is featured. All Regex filters should support [Microsoft's standard library](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference) for Regex strings. The settings.json will be created automatically if you open the application in a folder where one does not exist, and can be edited directly if you properly format it. 
 
 <br/>
 <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/fa075f2e-718e-4676-a2b6-47ff924fc6e7" />
