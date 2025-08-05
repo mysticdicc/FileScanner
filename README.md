@@ -38,7 +38,7 @@ The application has a settings Window to allow it to be used in different enviro
 <br/><br/>
 
 - Admin Group: The group which you wish to provide with administrator access if you run the access denied fix menu item. Eg: DANKNET\Domain Admins
-- Report Path: The file path or share path where you wish to store the logs and reports generated. Eg: \\dankfp01\reportshare$
+- Report Path: The file path or share path where you wish to store the logs and reports generated. Eg: \\\\dankfp01\reportshare$
 - LDAP String: The LDAP connection string for your environment. Eg: LDAP://dank.net/DC=dank,DC=net
 - Lines Per Report: The number of lines you wish to generate per csv file for the reports, which can be important as Excel has a line limit at which it will stop displaying data.
 - Email Filter: Regex string that filters for valid email addresses on the Personal Drives Report. Eg: .*@danknet.uk
@@ -46,7 +46,7 @@ The application has a settings Window to allow it to be used in different enviro
 - Email Attribute: The name of the Active Directory attribute in which your email addresses are stored. Eg: msDS-cloudExtensionAttribute1 or mail
 - Admin Group Filter: A list of Regex strings that are used to filter out groups that are on personal drives for the Personal Drive Reports. Some commons ones will be shown below, but you will also want to add ones that are unique to your environment like administrative groups:
   - Domain Admins: (?i).*Domain Admins
-  - Any Group With Administrators in the Name: (?i).*Administrators
+  - Any Group With Administrators in the Name: (?i).*Administrators.\*
   - Local System Accounts: (?i)NT AUTHORITY.*
   - The Everyone Group: (?i)Everyone
   - BuiltIn Accounts: (?i)BUILTIN.*
