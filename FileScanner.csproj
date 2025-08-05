@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	<PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	<DebugType>embedded</DebugType>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	<ApplicationIcon>videofolderblank_99341.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\file.png" />
+    <None Remove="Images\folder.png" />
+    <None Remove="Images\grey-file.png" />
+    <None Remove="Images\grey-folder.png" />
+    <None Remove="Images\lock.png" />
+    <None Remove="Images\red-file.png" />
+    <None Remove="Images\red-folder.png" />
+    <None Remove="videofolderblank_99341.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="videofolderblank_99341.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WPF-UI" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\file.png" />
+    <Resource Include="Images\folder.png" />
+    <Resource Include="Images\grey-file.png" />
+    <Resource Include="Images\grey-folder.png" />
+    <Resource Include="Images\lock.png" />
+    <Resource Include="Images\red-file.png" />
+    <Resource Include="Images\red-folder.png" />
+    <Resource Include="videofolderblank_99341.png" />
+  </ItemGroup>
+
+</Project>

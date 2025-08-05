@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FileScanner": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "srveuroitfp1:4026",
+      "authenticationMode": "Windows"
+    }
+  }
+}

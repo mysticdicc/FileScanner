@@ -1,0 +1,85 @@
+﻿<Window x:Class="FileScanner.Windows.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileScanner.Windows"
+        mc:Ignorable="d"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        WindowStyle="None" WindowStartupLocation="CenterOwner"
+        Title="SettingsWindow" Height="600" Width="400" Background="#FF272927">
+
+    <shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome CaptionHeight="0" ResizeBorderThickness="0" GlassFrameThickness="0" UseAeroCaptionButtons="False"/>
+    </shell:WindowChrome.WindowChrome>
+
+    <StackPanel>
+        <ui:TitleBar Grid.Row="0" Grid.ColumnSpan="2" Background="#FF363A36" Height="30" CloseClicked="BtnCancel_Click"/>
+        
+        <Border Margin="5">
+            <Grid Height="550">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100px"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40px"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Admin Group" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="0" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding AdminGroupName, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="1" Text="Report Path" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="1" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding ReportPath, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="2" Text="LDAP String" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="2" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding LdapString, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="3" Text="Lines Per Report" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                <ui:TextBox Grid.Row="3" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding LinesPerReport, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="4" Text="Email Filter" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="4" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding EmailFilter, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="5" Text="Domain Prefix" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="5" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding DomainPrefix, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="6" Text="Email Attribute" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ui:TextBox Grid.Row="6" Grid.Column="1" Foreground="#FFC0C4C4" Margin="2" Background="#FF363A36" Text="{Binding EmailAttribute, Mode=TwoWay}"/>
+
+                <TextBlock Grid.Row="7" Text="Admin Group Filter" Foreground="#FFC0C4C4" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
+                <Grid Grid.Row="7" Grid.RowSpan="3" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="40px"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ListView Grid.Column="0" Background="#FF363A36" Margin="2" ItemsSource="{Binding AdminGroupsFilter, Mode=TwoWay}" Foreground="#FFC0C4C4" Name="lstFilters" SelectionMode="Single" BorderBrush="{x:Null}"/>
+                    <ui:Button Grid.Column="1" Margin="2" Icon="{ui:SymbolIcon Symbol=Delete24}" VerticalAlignment="Top" Background="#FF363A36" Foreground="#FFC0C4C4" Click="BtnDelete_Click"/>
+                </Grid>
+
+
+                <DockPanel Grid.Row="10" Grid.ColumnSpan="2" LastChildFill="True">
+                    <ui:Button DockPanel.Dock="Right" Width="38px" Margin="2" Icon="{ui:SymbolIcon Symbol=Add24}" Background="#FF363A36" Foreground="#FFC0C4C4" Click="BtnAdd_Click"/>
+                    <ui:TextBox Margin="2" Background="#FF363A36" Name="txtFilterAdd"/>
+                </DockPanel>
+                
+                <ui:Button Content="Cancel" Grid.Row="11" Background="#FF363A36" HorizontalAlignment="Left" Foreground="#FFC0C4C4" Click="BtnCancel_Click"/>
+                <ui:Button Content="Save" Grid.Row="11" Grid.Column="1" Background="#FF363A36" HorizontalAlignment="Right" Foreground="#FFC0C4C4" Click="BtnCancel_Click"/>
+            </Grid>
+        </Border>
+    </StackPanel>
+</Window>
