@@ -6,12 +6,12 @@ This is a WPF tool created to assist with various file server maintenence issues
 <br/><br/>
 
 ## Reports
-- Personal Drives Report: It is quite common in file server/Active Directory style environments for users to have a personal drive where they store their data, everytime I have experienced this they have been under a folder on the server. This report will attempt to identify the owner of the shared drive by using the Regex filters set in the settings and then identify their mail address via LDAP query. This is then used to generate a mapping file which can be used with Microsoft's SharePoint Migration Tool to migrate this data into OneDrive.
 
 <br/>
 <img width="900" height="550" alt="image" src="https://github.com/user-attachments/assets/317a6fa2-79e4-47dc-85cf-25c364d00a0d" />
 <br/><br/>
 
+- Personal Drives Report: It is quite common in file server/Active Directory style environments for users to have a personal drive where they store their data, everytime I have experienced this they have been under a folder on the server. This report will attempt to identify the owner of the shared drive by using the Regex filters set in the settings and then identify their mail address via LDAP query. This is then used to generate a mapping file which can be used with Microsoft's SharePoint Migration Tool to migrate this data into OneDrive.
 - File Length: This will create a csv file of all of the file paths which are longer than 250 characters in the scanned file strcuture, which can cause issues on Windows file shares and impede SharePoint migrations.
 - Hidden Files: This will create a list of all hidden files on the server which again can cause issues with SharePoint migrations.
 - Access Denied: A list of all folders where the user running the tool does not have access.
